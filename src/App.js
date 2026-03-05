@@ -8,10 +8,10 @@ function App() {
 
 <nav className="navbar navbar-dark  fixed-top border-bottom border-secondary py-0">
         <div className="container">
-          <a className="navbar-brand fw-bold fs-4">
+          <span className="navbar-brand fw-bold fs-4">
             <span className="text-info me-2">{"</>"}</span>
             Tanay Murade
-          </a>
+          </span>
         </div>
       </nav>
 
@@ -63,6 +63,7 @@ function App() {
                   <div className="d-flex gap-3 mt-3">
                    <a 
                       href="https://book-shelf-frontend-ym5b.vercel.app" 
+                      rel="noreferrer"
                       target="_blank" 
                       className="btn btn-primary w-50"
                     >
