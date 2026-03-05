@@ -8,7 +8,7 @@ function App() {
 
 <nav className="navbar navbar-dark  fixed-top border-bottom border-secondary py-0">
         <div className="container">
-          <a className="navbar-brand fw-bold fs-4" href="#">
+          <a className="navbar-brand fw-bold fs-4">
             <span className="text-info me-2">{"</>"}</span>
             Tanay Murade
           </a>
@@ -30,8 +30,8 @@ function App() {
           <a  href = "#connect"className="btn btn-primary px-4 py-2">Contact Me</a>
 <a 
             href="https://drive.google.com/file/d/1gSLCs6ZTluBYHmxnsSm3Ye68yzomuEle/view?usp=drive_link" 
+            rel="noreferrer"
             target="_blank" 
-            rel="noopener noreferrer" 
             className="btn btn-outline-light ms-3 px-4 py-2"
           >
             Resume
@@ -70,6 +70,7 @@ function App() {
                     </a>
                     <a 
                       href="https://github.com/tanaymurade74/BookShelf-Frontend" 
+                      rel="noreferrer"
                       target="_blank" 
                       className="btn btn-outline-light w-50"
                     >
@@ -101,6 +102,7 @@ function App() {
                   <div className="d-flex gap-3 mt-3">
                     <a 
                       href="https://crm-frontend-9o5d.vercel.app" 
+                      rel="noreferrer"
                       target="_blank" 
                       className="btn btn-primary w-50"
                     >
@@ -108,6 +110,7 @@ function App() {
                     </a>
                     <a 
                       href="https://github.com/tanaymurade74/CRM-Frontend" 
+                      rel="noreferrer"
                       target="_blank" 
                       className="btn btn-outline-light w-50"
                     >
@@ -163,6 +166,7 @@ function App() {
             <div className="col-md-4">
               <a
                 href="https://github.com/tanaymurade74"
+                rel="noreferrer"
                 target="_blank"
                 className="text-info text-decoration-none fw-bold fs-5"
               >
@@ -174,6 +178,7 @@ function App() {
             <div className="col-md-4">
                 <a
                   href="https://www.linkedin.com/in/tanay-murade-7880b6317/"
+                  rel="noreferrer"
                   target = "_blank"
                   className="text-info text-decoration-none fw-bold fs-5"
                 >
