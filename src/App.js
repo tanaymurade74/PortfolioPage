@@ -155,7 +155,7 @@ function App() {
                     </a>
                     <a 
                       href="https://github.com/tanaymurade74/ChatAppFrontend" 
-                      rel= "noreferrer
+                      rel= "noreferrer"
                       target="_blank" 
                       className="btn btn-outline-light w-50"
                     >
