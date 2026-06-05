@@ -48,7 +48,7 @@ function App() {
                   style={{ height: "200px" }}
                 >
                   <img
-                    src="https://imgs.search.brave.com/7IhQu-sGgLaCmT3tAbHqbfCh4svuqEVOgh-MdoezsEc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9ib29r/c2hlbGYtc2lnbi1s/aW5lLWljb24tbG9n/by1ib29rcy1zaGVs/dmVzLWNvbmNlcHQt/bGlicmFyeS12ZWN0/b3ItbGluZWFyLWls/bHVzdHJhdGlvbi0y/MDUwMjE1NzcuanBn"
+                    src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop"
                     alt="Book Shelf"
                     className="w-100 h-100 object-fit-cover"
                   />
@@ -123,6 +123,46 @@ function App() {
             </div>
           </div>
         </div>
+
+
+                             <div className="col-md-6">
+              <div className="card bg-dark text-light border-secondary h-100 shadow">
+                <div
+                  className="card-img-top bg-light"
+                  style={{ height: "200px" }}
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop"
+                    alt="Chat App"
+                    className="w-100 h-100 object-fit-cover"
+                  />
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h4 className="card-title text-info">Chat App</h4>
+                  <p className="card-text flex-grow-1">
+                    A real-time chat application with Socket.io featuring instant
+                    messaging, typing indicators, read receipts, emoji support,
+                    message editing, deletion, and reply threads.
+                  </p>
+                  <div className="d-flex gap-3 mt-3">
+                    <a 
+                      href="https://chat-app-frontend-three-umber.vercel.app" 
+                      target="_blank" 
+                      className="btn btn-primary w-50"
+                    >
+                      Demo
+                    </a>
+                    <a 
+                      href="https://github.com/tanaymurade74/ChatAppFrontend" 
+                      target="_blank" 
+                      className="btn btn-outline-light w-50"
+                    >
+                      Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
         <div className="mb-5 pb-5 border-bottom border-secondary">
           <h2 className="mb-3 fw-bold">Tech Stack</h2>
