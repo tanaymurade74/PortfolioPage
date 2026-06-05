@@ -5,8 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 function App() {
   return (
     <div className="bg-dark min-vh-100">
-
-<nav className="navbar navbar-dark  fixed-top border-bottom border-secondary py-0">
+      <nav className="navbar navbar-dark  fixed-top border-bottom border-secondary py-0">
         <div className="container">
           <span className="navbar-brand fw-bold fs-4">
             <span className="text-info me-2">{"</>"}</span>
@@ -27,11 +26,13 @@ function App() {
             Specializing in React, Node.js, and MongoDB to build scalable and
             user-centered applications.
           </p>
-          <a  href = "#connect"className="btn btn-primary px-4 py-2">Contact Me</a>
-<a 
-            href="https://drive.google.com/file/d/1gSLCs6ZTluBYHmxnsSm3Ye68yzomuEle/view?usp=drive_link" 
+          <a href="#connect" className="btn btn-primary px-4 py-2">
+            Contact Me
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1gSLCs6ZTluBYHmxnsSm3Ye68yzomuEle/view?usp=drive_link"
             rel="noreferrer"
-            target="_blank" 
+            target="_blank"
             className="btn btn-outline-light ms-3 px-4 py-2"
           >
             Resume
@@ -61,18 +62,18 @@ function App() {
                     and wishlist updates and seamless orders.
                   </p>
                   <div className="d-flex gap-3 mt-3">
-                   <a 
-                      href="https://book-shelf-frontend-ym5b.vercel.app" 
+                    <a
+                      href="https://book-shelf-frontend-ym5b.vercel.app"
                       rel="noreferrer"
-                      target="_blank" 
+                      target="_blank"
                       className="btn btn-primary w-50"
                     >
                       Demo
                     </a>
-                    <a 
-                      href="https://github.com/tanaymurade74/BookShelf-Frontend" 
+                    <a
+                      href="https://github.com/tanaymurade74/BookShelf-Frontend"
                       rel="noreferrer"
-                      target="_blank" 
+                      target="_blank"
                       className="btn btn-outline-light w-50"
                     >
                       Code
@@ -101,18 +102,18 @@ function App() {
                     pipeline visualization, follow-ups, and analytics.
                   </p>
                   <div className="d-flex gap-3 mt-3">
-                    <a 
-                      href="https://crm-frontend-9o5d.vercel.app" 
+                    <a
+                      href="https://crm-frontend-9o5d.vercel.app"
                       rel="noreferrer"
-                      target="_blank" 
+                      target="_blank"
                       className="btn btn-primary w-50"
                     >
                       Demo
                     </a>
-                    <a 
-                      href="https://github.com/tanaymurade74/CRM-Frontend" 
+                    <a
+                      href="https://github.com/tanaymurade74/CRM-Frontend"
                       rel="noreferrer"
-                      target="_blank" 
+                      target="_blank"
                       className="btn btn-outline-light w-50"
                     >
                       Code
@@ -121,11 +122,8 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-
-                             <div className="col-md-6">
+            <div className="col-md-6">
               <div className="card bg-dark text-light border-secondary h-100 shadow">
                 <div
                   className="card-img-top bg-light"
@@ -140,23 +138,23 @@ function App() {
                 <div className="card-body d-flex flex-column">
                   <h4 className="card-title text-info">Chat App</h4>
                   <p className="card-text flex-grow-1">
-                    A real-time chat application with Socket.io featuring instant
-                    messaging, typing indicators, read receipts, emoji support,
-                    message editing, deletion, and reply threads.
+                    A real-time chat application with Socket.io featuring
+                    instant messaging, typing indicators, read receipts, emoji
+                    support, message editing, deletion, and reply threads.
                   </p>
                   <div className="d-flex gap-3 mt-3">
-                    <a 
-                      href="https://chat-app-frontend-three-umber.vercel.app" 
+                    <a
+                      href="https://chat-app-frontend-three-umber.vercel.app"
                       rel="noreferrer"
-                      target="_blank" 
+                      target="_blank"
                       className="btn btn-primary w-50"
                     >
                       Demo
                     </a>
-                    <a 
-                      href="https://github.com/tanaymurade74/ChatAppFrontend" 
-                      rel= "noreferrer"
-                      target="_blank" 
+                    <a
+                      href="https://github.com/tanaymurade74/ChatAppFrontend"
+                      rel="noreferrer"
+                      target="_blank"
                       className="btn btn-outline-light w-50"
                     >
                       Code
@@ -165,6 +163,8 @@ function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
         <div className="mb-5 pb-5 border-bottom border-secondary">
           <h2 className="mb-3 fw-bold">Tech Stack</h2>
@@ -193,7 +193,9 @@ function App() {
           </div>
         </div>
         <div>
-          <h2 className="mb-3 fw-bold" id = "connect">Connect</h2>
+          <h2 className="mb-3 fw-bold" id="connect">
+            Connect
+          </h2>
           <p className="text-secondary mb-4">Let's Collaborate</p>
           <div className="row g-3 text-center">
             <div className="col-md-4">
@@ -219,17 +221,16 @@ function App() {
               </a>
             </div>
             <div className="col-md-4">
-                <a
-                  href="https://www.linkedin.com/in/tanay-murade-7880b6317/"
-                  rel="noreferrer"
-                  target = "_blank"
-                  className="text-info text-decoration-none fw-bold fs-5"
-                >
-                                <div className="p-3 border border-secondary rounded">
-
+              <a
+                href="https://www.linkedin.com/in/tanay-murade-7880b6317/"
+                rel="noreferrer"
+                target="_blank"
+                className="text-info text-decoration-none fw-bold fs-5"
+              >
+                <div className="p-3 border border-secondary rounded">
                   <FaLinkedin size={40} />
-                  </div>
-                </a>
+                </div>
+              </a>
             </div>
           </div>
         </div>
