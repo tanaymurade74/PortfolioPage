@@ -147,6 +147,7 @@ function App() {
                   <div className="d-flex gap-3 mt-3">
                     <a 
                       href="https://chat-app-frontend-three-umber.vercel.app" 
+                      rel="noreferrer"
                       target="_blank" 
                       className="btn btn-primary w-50"
                     >
@@ -154,6 +155,7 @@ function App() {
                     </a>
                     <a 
                       href="https://github.com/tanaymurade74/ChatAppFrontend" 
+                      rel= "noreferrer
                       target="_blank" 
                       className="btn btn-outline-light w-50"
                     >
