@@ -30,7 +30,7 @@ function App() {
             Contact Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1sdcoJx6fIJL_btQAMn54y8H41jRneRlr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1TjMX9iiZH9PQYtwGZY4HSai5eE4-qsGe/view?usp=drive_link"
             rel="noreferrer"
             target="_blank"
             className="btn btn-outline-light ms-3 px-4 py-2"
