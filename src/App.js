@@ -1,242 +1,285 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import {Link} from "react-router-dom"
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./App.css";
+
+const RESUME =
+  "https://drive.google.com/file/d/18Rmwwj-eL1ZCchu41edn39IWmd-25hlj/view?usp=drive_link";
+
+const projects = [
+  {
+    title: "Book Shelf",
+    kind: "Web app",
+    cover: "bg-info",
+    icon: "bi-book",
+    domain: "book-shelf.vercel.app",
+    desc: "An online bookstore with intuitive search and filtering by genre and author, real-time cart and wishlist updates, and a smooth checkout flow.",
+    tags: ["React", "Express", "MongoDB"],
+    demo: "https://book-shelf-frontend-ym5b.vercel.app",
+    code: "https://github.com/tanaymurade74/BookShelf-Frontend",
+  },
+  {
+    title: "Rapport",
+    kind: "CRM platform",
+    cover: "bg-primary",
+    icon: "bi-funnel-fill",
+    domain: "anvaya-crm.vercel.app",
+    desc: "An intuitive CRM for lead management — with pipeline visualisation, scheduled follow-ups, and analytics to keep every deal moving.",
+    tags: ["React", "Node.js", "MongoDB"],
+    demo: "https://crm-frontend-9o5d.vercel.app",
+    code: "https://github.com/tanaymurade74/CRM-Frontend",
+  },
+  {
+    title: "Nexus Chat",
+    kind: "Real-time",
+    cover: "bg-danger",
+    icon: "bi-chat-dots-fill",
+    domain: "chat-app.vercel.app",
+    desc: "A real-time messaging app built on Socket.io — typing indicators, read receipts, emoji, plus message editing, deletion, and reply threads.",
+    tags: ["React", "Socket.io", "Node.js"],
+    demo: "https://chat-app-frontend-three-umber.vercel.app",
+    code: "https://github.com/tanaymurade74/ChatAppFrontend",
+  },
+];
+
+const stack = {
+  Frontend: [
+    ["React", "info"],
+    ["Bootstrap", "primary"],
+  ],
+  Backend: [
+    ["Node.js", "success"],
+    ["Express", "light"],
+    ["MongoDB", "success"],
+    ["Mongoose", "danger"],
+  ],
+  Tools: [
+    ["Git", "danger"],
+    ["GitHub", "light"],
+    ["DevTools", "warning"],
+    ["Vercel", "light"],
+  ],
+};
+
+const contacts = [
+  {
+    label: "Email",
+    value: "tanaymurade8@gmail.com",
+    icon: "bi-envelope-fill",
+    href: "mailto:tanaymurade8@gmail.com",
+    external: false,
+  },
+  {
+    label: "GitHub",
+    value: "@tanaymurade74",
+    icon: "bi-github",
+    href: "https://github.com/tanaymurade74",
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    value: "Tanay Murade",
+    icon: "bi-linkedin",
+    href: "https://www.linkedin.com/in/tanay-murade-7880b6317/",
+    external: true,
+  },
+];
+
+const dotStyle = { fontSize: ".5rem", verticalAlign: "middle" };
+
 function App() {
   return (
-    <div className="bg-dark min-vh-100">
-      <nav className="navbar navbar-dark  fixed-top border-bottom border-secondary py-0">
+    <div className="bg-dark min-vh-100" data-bs-theme="dark">
+      {/* NAV — sticky (reserves its space, no overlap) */}
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-secondary sticky-top">
         <div className="container">
-          <span className="navbar-brand fw-bold fs-4">
-            <span className="text-info me-2">{"</>"}</span>
-            Tanay Murade
-          </span>
+          <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="#top">
+            <i className="bi bi-code-slash text-info" /> Tanay Murade
+          </a>
+          <button
+            className="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="nav">
+            <ul className="navbar-nav ms-auto align-items-md-center gap-md-2">
+              <li className="nav-item">
+                <a className="nav-link" href="#projects">Projects</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#stack">Stack</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#connect">Connect</a>
+              </li>
+              <li className="nav-item ms-md-2 mt-2 mt-md-0">
+                <a
+                  className="btn btn-outline-light btn-sm px-3"
+                  href={RESUME}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="bi bi-download me-1" /> Résumé
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
-      <main className="container text-light py-5">
-        <div className="mb-5 pb-5 border-bottom border-secondary">
-          <h1 className="display-4 fw-bold">Tanay Murade</h1>
-          <h4 className="text-info mb-4">Full Stack Dev</h4>
-          <p>
-            Passionate full-stack developer crafting intuitive digital
-            experiences with modern technologies
-          </p>
-          <p className="mb-4">
-            Specializing in React, Node.js, and MongoDB to build scalable and
-            user-centered applications.
-          </p>
-          <a href="#connect" className="btn btn-primary px-4 py-2">
-            Contact Me
-          </a>
-          <a
-            href="https://drive.google.com/file/d/18Rmwwj-eL1ZCchu41edn39IWmd-25hlj/view?usp=sharing"
-            rel="noreferrer"
-            target="_blank"
-            className="btn btn-outline-light ms-3 px-4 py-2"
-          >
-            Resume
-          </a>
-        </div>
-
-        <div className="mb-5 pb-5 border-bottom border-secondary">
-          <h2 className="mb-4 fw-bold">Projects</h2>
-          <div className="row g-4">
-            <div className="col-md-6">
-              <div className="card bg-dark text-light border-secondary h-100 shadow">
-                <div
-                  className="card-img-top bg-light"
-                  style={{ height: "200px" }}
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop"
-                    alt="Book Shelf"
-                    className="w-100 h-100 object-fit-cover"
-                  />
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h4 className="card-title text-info">Book Shelf</h4>
-                  <p className="card-text flex-grow-1">
-                    A comprehensive online bookstore featuring intuitive search
-                    and filtering by genre and author. Includes real-time cart
-                    and wishlist updates and seamless orders.
-                  </p>
-                  <div className="d-flex gap-3 mt-3">
-                    <a
-                      href="https://book-shelf-frontend-ym5b.vercel.app"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="btn btn-primary w-50"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href="https://github.com/tanaymurade74/BookShelf-Frontend"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="btn btn-outline-light w-50"
-                    >
-                      Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6">
-              <div className="card bg-dark text-light border-secondary h-100 shadow">
-                <div
-                  className="card-img-top bg-light"
-                  style={{ height: "200px" }}
-                >
-                  <img
-                    src="https://static.vecteezy.com/system/resources/previews/026/590/504/non_2x/crm-logo-design-inspiration-for-a-unique-identity-modern-elegance-and-creative-design-watermark-your-success-with-the-striking-this-logo-vector.jpg"
-                    alt="Anvaya CRM"
-                    className="w-100 h-100 object-fit-cover"
-                  />
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h4 className="card-title text-info">Anvaya</h4>
-                  <p className="card-text flex-grow-1">
-                    An intuitive CRM system designed for lead management with
-                    pipeline visualization, follow-ups, and analytics.
-                  </p>
-                  <div className="d-flex gap-3 mt-3">
-                    <a
-                      href="https://crm-frontend-9o5d.vercel.app"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="btn btn-primary w-50"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href="https://github.com/tanaymurade74/CRM-Frontend"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="btn btn-outline-light w-50"
-                    >
-                      Code
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-6">
-              <div className="card bg-dark text-light border-secondary h-100 shadow">
-                <div
-                  className="card-img-top bg-light"
-                  style={{ height: "200px" }}
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop"
-                    alt="Chat App"
-                    className="w-100 h-100 object-fit-cover"
-                  />
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h4 className="card-title text-info">Chat App</h4>
-                  <p className="card-text flex-grow-1">
-                    A real-time chat application with Socket.io featuring
-                    instant messaging, typing indicators, read receipts, emoji
-                    support, message editing, deletion, and reply threads.
-                  </p>
-                  <div className="d-flex gap-3 mt-3">
-                    <a
-                      href="https://chat-app-frontend-three-umber.vercel.app"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="btn btn-primary w-50"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href="https://github.com/tanaymurade74/ChatAppFrontend"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="btn btn-outline-light w-50"
-                    >
-                      Code
-                    </a>
-                  </div>
-                </div>
+      {/* HERO */}
+      <section id="top" className="py-5">
+        <div className="container py-md-4">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <h1 className="display-3 fw-bold mb-2">Tanay Murade</h1>
+              <p className="fs-3 fw-semibold mb-3">
+                <span className="text-info">Full Stack</span> Developer
+              </p>
+              <p className="text-secondary fs-5 mb-2">
+                I build intuitive digital experiences with modern web technologies —
+                turning ideas into fast, reliable products.
+              </p>
+              <p className="text-secondary mb-3">
+                I specialise in React, Node.js, and MongoDB to ship scalable,
+                user-centered applications end to end.
+              </p>
+              <span className="badge rounded-pill text-bg-dark border border-secondary py-2 px-3 mb-4">
+                <i className="bi bi-circle-fill text-warning me-1" style={{ fontSize: ".55rem", verticalAlign: "middle" }} />
+                Available for work
+              </span>
+              <div className="d-flex flex-wrap gap-2">
+                <a href="#connect" className="btn btn-info px-4">
+                  <i className="bi bi-envelope-fill me-1" /> Contact me
+                </a>
+                <a href={RESUME} target="_blank" rel="noreferrer" className="btn btn-outline-light px-4">
+                  <i className="bi bi-file-earmark-text me-1" /> Résumé
+                </a>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="mb-5 pb-5 border-bottom border-secondary">
-          <h2 className="mb-3 fw-bold">Tech Stack</h2>
-          <p className="text-secondary mb-4">Technologies and tools used</p>
+      <section id="projects" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
+        <div className="container py-md-3">
+          <div className="text-info font-monospace small mb-1">// projects</div>
+          <h2 className="fw-bold mb-1">Selected work</h2>
+          <p className="text-secondary mb-4">
+            Full-stack apps I designed, built, and deployed end to end.
+          </p>
 
-          <div className="row g-4 mt-2">
-            {[
-              "React",
-              "Node.js",
-              "MongoDB",
-              "Mongoose",
-              "Bootstrap",
-              "Express",
-              "Git",
-              "GitHub",
-              "DevTools",
-              "Vercel",
-            ].map((tech, index) => (
-              <div key={index} className="col-6 col-md-4 col-lg-3">
-                <div className="d-flex align-items-center gap-3">
-                  <span className="text-secondary fs-5">❖</span>
-                  <span className="fs-5">{tech}</span>
+          <div className="row g-4">
+            {projects.map((p) => (
+              <div className="col-md-6 col-lg-4" key={p.title}>
+                <div className="card h-100 bg-dark border-secondary shadow-sm">
+                  <div
+                    className={`position-relative overflow-hidden rounded-top bg-gradient d-flex align-items-center justify-content-center ${p.cover}`}
+                    style={{ height: "172px" }}
+                  >
+                    
+                    <i className={`bi ${p.icon} display-3 text-white`} />
+                  </div>
+                  <div className="card-body d-flex flex-column">
+                    <div className="text-info text-uppercase small fw-semibold mb-1">{p.kind}</div>
+                    <h5 className="card-title fw-bold">{p.title}</h5>
+                    <p className="card-text text-secondary flex-grow-1">{p.desc}</p>
+                    <div className="d-flex flex-wrap gap-2 mb-3">
+                      {p.tags.map((t) => (
+                        <span className="badge text-bg-dark border border-secondary fw-normal" key={t}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="d-flex gap-2 mt-auto">
+                      <a href={p.demo} target="_blank" rel="noreferrer" className="btn btn-info btn-sm">
+                        Live demo <i className="bi bi-box-arrow-up-right ms-1" />
+                      </a>
+                      <a href={p.code} target="_blank" rel="noreferrer" className="btn btn-outline-light btn-sm">
+                        <i className="bi bi-github me-1" /> Code
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <div>
-          <h2 className="mb-3 fw-bold" id="connect">
-            Connect
-          </h2>
-          <p className="text-secondary mb-4">Let's Collaborate</p>
-          <div className="row g-3 text-center">
-            <div className="col-md-4">
-              <a
-                href="mailto:tanaymurade8@gmail.com"
-                className="text-info text-decoration-none fw-bold fs-5"
-              >
-                <div className="p-3 border border-secondary rounded hover-bg-light">
-                  <FaEnvelope size={40} />
-                </div>
-              </a>
+      </section>
+
+      {/* STACK */}
+      <section id="stack" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
+        <div className="container py-md-3">
+          <div className="text-info font-monospace small mb-1">// stack</div>
+          <h2 className="fw-bold mb-1">Tech stack</h2>
+          <p className="text-secondary mb-4">
+            The tools and technologies I reach for, day to day.
+          </p>
+
+          {Object.entries(stack).map(([group, items]) => (
+            <div className="mb-4" key={group}>
+              <div className="text-uppercase small fw-semibold text-secondary mb-2">{group}</div>
+              <div className="d-flex flex-wrap gap-2">
+                {items.map(([name, color]) => (
+                  <span className="badge rounded-pill text-bg-dark border border-secondary fw-normal fs-6 px-3 py-2" key={name}>
+                    <i className={`bi bi-circle-fill text-${color} me-2`} style={dotStyle} />
+                    {name}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="col-md-4">
-              <a
-                href="https://github.com/tanaymurade74"
-                rel="noreferrer"
-                target="_blank"
-                className="text-info text-decoration-none fw-bold fs-5"
-              >
-                <div className="p-3 border border-secondary rounded">
-                  <FaGithub size={40} />
-                </div>
-              </a>
-            </div>
-            <div className="col-md-4">
-              <a
-                href="https://www.linkedin.com/in/tanay-murade-7880b6317/"
-                rel="noreferrer"
-                target="_blank"
-                className="text-info text-decoration-none fw-bold fs-5"
-              >
-                <div className="p-3 border border-secondary rounded">
-                  <FaLinkedin size={40} />
-                </div>
-              </a>
-            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONNECT */}
+      <section id="connect" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
+        <div className="container py-md-3">
+          <div className="text-info font-monospace small mb-1">// connect</div>
+          <h2 className="fw-bold mb-1">Let's collaborate</h2>
+          <p className="text-secondary mb-4">
+            Open to full-stack roles and freelance projects — the fastest way to reach me is below.
+          </p>
+
+          <div className="row g-4">
+            {contacts.map((c) => (
+              <div className="col-md-4" key={c.label}>
+                <a
+                  href={c.href}
+                  className="card h-100 bg-dark border-secondary text-decoration-none"
+                  {...(c.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                >
+                  <div className="card-body">
+                    <span
+                      className="d-inline-flex align-items-center justify-content-center rounded-circle border border-secondary mb-3"
+                      style={{ width: "56px", height: "56px" }}
+                    >
+                      <i className={`bi ${c.icon} fs-4 text-info`} />
+                    </span>
+                    <div className="text-uppercase small text-secondary">{c.label}</div>
+                    <div className="fw-semibold text-light text-break">{c.value}</div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
-      </main>
-      <footer className="text-center text-light py-4 border-top border-secondary mt-auto">
-        <small>© 2026 Tanay Murade • All rights reserved</small>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="text-center text-secondary py-4 border-top border-secondary">
+        <div className="container">
+          <div className="fw-semibold mb-1">
+            <i className="bi bi-code-slash text-info me-1" /> Tanay Murade
+          </div>
+          <small className="font-monospace">© 2026 Tanay Murade · All rights reserved</small>
+        </div>
       </footer>
     </div>
   );
