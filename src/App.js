@@ -12,7 +12,7 @@ const projects = [
     kind: "Web app",
     cover: "bg-info",
     icon: "bi-book",
-    domain: "book-shelf.vercel.app",
+    // domain: "book-shelf.vercel.app",
     desc: "An online bookstore with intuitive search and filtering by genre and author, real-time cart and wishlist updates, and a smooth checkout flow.",
     tags: ["React", "Express", "MongoDB"],
     demo: "https://book-shelf-frontend-ym5b.vercel.app",
@@ -23,7 +23,7 @@ const projects = [
     kind: "CRM platform",
     cover: "bg-primary",
     icon: "bi-funnel-fill",
-    domain: "anvaya-crm.vercel.app",
+    // domain: "anvaya-crm.vercel.app",
     desc: "An intuitive CRM for lead management — with pipeline visualisation, scheduled follow-ups, and analytics to keep every deal moving.",
     tags: ["React", "Node.js", "MongoDB"],
     demo: "https://crm-frontend-9o5d.vercel.app",
@@ -34,7 +34,7 @@ const projects = [
     kind: "Real-time",
     cover: "bg-danger",
     icon: "bi-chat-dots-fill",
-    domain: "chat-app.vercel.app",
+    // domain: "chat-app.vercel.app",
     desc: "A real-time messaging app built on Socket.io — typing indicators, read receipts, emoji, plus message editing, deletion, and reply threads.",
     tags: ["React", "Socket.io", "Node.js"],
     demo: "https://chat-app-frontend-three-umber.vercel.app",
@@ -90,7 +90,6 @@ const dotStyle = { fontSize: ".5rem", verticalAlign: "middle" };
 function App() {
   return (
     <div className="bg-dark min-vh-100" data-bs-theme="dark">
-      {/* NAV — sticky (reserves its space, no overlap) */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-secondary sticky-top">
         <div className="container">
           <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="#top">
@@ -133,7 +132,6 @@ function App() {
         </div>
       </nav>
 
-      {/* HERO */}
       <section id="top" className="py-5">
         <div className="container py-md-4">
           <div className="row align-items-center g-5">
@@ -152,7 +150,7 @@ function App() {
               </p>
               <span className="badge rounded-pill text-bg-dark border border-secondary py-2 px-3 mb-4">
                 <i className="bi bi-circle-fill text-warning me-1" style={{ fontSize: ".55rem", verticalAlign: "middle" }} />
-                Available for work
+                  Eager to learn and contribute
               </span>
               <div className="d-flex flex-wrap gap-2">
                 <a href="#connect" className="btn btn-info px-4">
@@ -213,7 +211,6 @@ function App() {
         </div>
       </section>
 
-      {/* STACK */}
       <section id="stack" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
         <div className="container py-md-3">
           <div className="text-info font-monospace small mb-1">// stack</div>
@@ -238,7 +235,6 @@ function App() {
         </div>
       </section>
 
-      {/* CONNECT */}
       <section id="connect" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
         <div className="container py-md-3">
           <div className="text-info font-monospace small mb-1">// connect</div>
@@ -272,7 +268,6 @@ function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="text-center text-secondary py-4 border-top border-secondary">
         <div className="container">
           <div className="fw-semibold mb-1">
