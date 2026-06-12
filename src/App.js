@@ -27,7 +27,7 @@ const projects = [
     desc: "An intuitive CRM for lead management — with pipeline visualisation, scheduled follow-ups, and analytics to keep every deal moving.",
     tags: ["React", "Node.js", "MongoDB"],
     demo: "https://crm-frontend-9o5d.vercel.app",
-    code: "https://github.com/tanaymurade74/CRM-Frontend",
+    code: "https://github.com/tanaymurade74/Rapport-Frontend",
   },
   {
     title: "Nexus Chat",
@@ -38,7 +38,7 @@ const projects = [
     desc: "A real-time messaging app built on Socket.io — typing indicators, read receipts, emoji, plus message editing, deletion, and reply threads.",
     tags: ["React", "Socket.io", "Node.js"],
     demo: "https://chat-app-frontend-three-umber.vercel.app",
-    code: "https://github.com/tanaymurade74/ChatAppFrontend",
+    code: "https://github.com/tanaymurade74/NexusChatFrontend",
   },
 ];
 
