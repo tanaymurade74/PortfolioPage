@@ -66,8 +66,8 @@ const contacts = [
     label: "Email",
     value: "tanaymurade8@gmail.com",
     icon: "bi-envelope-fill",
-    href: "mailto:tanaymurade8@gmail.com",
-    external: false,
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=tanaymurade8@gmail.com",
+    external: true,
   },
   {
     label: "GitHub",
@@ -89,7 +89,7 @@ const dotStyle = { fontSize: ".5rem", verticalAlign: "middle" };
 
 function App() {
   return (
-    <div className="bg-dark min-vh-100" data-bs-theme="dark">
+    <div className="bg-dark min-vh-100 text-light" data-bs-theme="dark">
       <nav className="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-secondary sticky-top">
         <div className="container">
           <a className="navbar-brand fw-bold d-flex align-items-center gap-2" href="#top">
@@ -124,7 +124,7 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i className="bi bi-download me-1" /> Résumé
+                  <i className="bi bi-file-earmark-text me-1" /> Résumé
                 </a>
               </li>
             </ul>
@@ -136,15 +136,15 @@ function App() {
         <div className="container py-md-4">
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
-              <h1 className="display-3 fw-bold mb-2">Tanay Murade</h1>
-              <p className="fs-3 fw-semibold mb-3">
+              <h1 className="display-3 fw-bold mb-2 text-white">Tanay Murade</h1>
+              <p className="fs-3 fw-semibold mb-3 text-white">
                 <span className="text-info">Full Stack</span> Developer
               </p>
-              <p className="text-secondary fs-5 mb-2">
+              <p className="text-body-secondary fs-5 mb-2">
                 I build intuitive digital experiences with modern web technologies —
                 turning ideas into fast, reliable products.
               </p>
-              <p className="text-secondary mb-3">
+              <p className="text-body-secondary mb-3">
                 I specialise in React, Node.js, and MongoDB to ship scalable,
                 user-centered applications end to end.
               </p>
@@ -156,9 +156,6 @@ function App() {
                 <a href="#connect" className="btn btn-info px-4">
                   <i className="bi bi-envelope-fill me-1" /> Contact me
                 </a>
-                <a href={RESUME} target="_blank" rel="noreferrer" className="btn btn-outline-light px-4">
-                  <i className="bi bi-file-earmark-text me-1" /> Résumé
-                </a>
               </div>
             </div>
           </div>
@@ -168,8 +165,8 @@ function App() {
       <section id="projects" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
         <div className="container py-md-3">
           <div className="text-info font-monospace small mb-1">// projects</div>
-          <h2 className="fw-bold mb-1">Selected work</h2>
-          <p className="text-secondary mb-4">
+          <h2 className="fw-bold mb-1 text-white">Selected work</h2>
+          <p className="text-body-secondary mb-4">
             Full-stack apps I designed, built, and deployed end to end.
           </p>
 
@@ -186,8 +183,8 @@ function App() {
                   </div>
                   <div className="card-body d-flex flex-column">
                     <div className="text-info text-uppercase small fw-semibold mb-1">{p.kind}</div>
-                    <h5 className="card-title fw-bold">{p.title}</h5>
-                    <p className="card-text text-secondary flex-grow-1">{p.desc}</p>
+                    <h5 className="card-title fw-bold text-white">{p.title}</h5>
+                    <p className="card-text text-body-secondary flex-grow-1">{p.desc}</p>
                     <div className="d-flex flex-wrap gap-2 mb-3">
                       {p.tags.map((t) => (
                         <span className="badge text-bg-dark border border-secondary fw-normal" key={t}>
@@ -214,14 +211,14 @@ function App() {
       <section id="stack" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
         <div className="container py-md-3">
           <div className="text-info font-monospace small mb-1">// stack</div>
-          <h2 className="fw-bold mb-1">Tech stack</h2>
-          <p className="text-secondary mb-4">
+          <h2 className="fw-bold mb-1 text-white">Tech stack</h2>
+          <p className="text-body-secondary mb-4">
             The tools and technologies I reach for, day to day.
           </p>
 
           {Object.entries(stack).map(([group, items]) => (
             <div className="mb-4" key={group}>
-              <div className="text-uppercase small fw-semibold text-secondary mb-2">{group}</div>
+              <div className="text-uppercase small fw-semibold text-light mb-2">{group}</div>
               <div className="d-flex flex-wrap gap-2">
                 {items.map(([name, color]) => (
                   <span className="badge rounded-pill text-bg-dark border border-secondary fw-normal fs-6 px-3 py-2" key={name}>
@@ -238,8 +235,8 @@ function App() {
       <section id="connect" className="py-5 border-top border-secondary" style={{ scrollMarginTop: "80px" }}>
         <div className="container py-md-3">
           <div className="text-info font-monospace small mb-1">// connect</div>
-          <h2 className="fw-bold mb-1">Let's collaborate</h2>
-          <p className="text-secondary mb-4">
+          <h2 className="fw-bold mb-1 text-white">Let's collaborate</h2>
+          <p className="text-body-secondary mb-4">
             Open to full-stack roles and freelance projects — the fastest way to reach me is below.
           </p>
 
@@ -258,7 +255,7 @@ function App() {
                     >
                       <i className={`bi ${c.icon} fs-4 text-info`} />
                     </span>
-                    <div className="text-uppercase small text-secondary">{c.label}</div>
+                    <div className="text-uppercase small text-body-secondary">{c.label}</div>
                     <div className="fw-semibold text-light text-break">{c.value}</div>
                   </div>
                 </a>
@@ -268,7 +265,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="text-center text-secondary py-4 border-top border-secondary">
+      <footer className="text-center text-body-secondary py-4 border-top border-secondary">
         <div className="container">
           <div className="fw-semibold mb-1">
             <i className="bi bi-code-slash text-info me-1" /> Tanay Murade
