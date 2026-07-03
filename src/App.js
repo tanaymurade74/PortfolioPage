@@ -7,6 +7,18 @@ const RESUME =
   "https://drive.google.com/file/d/18Rmwwj-eL1ZCchu41edn39IWmd-25hlj/view?usp=drive_link";
 
 const projects = [
+  
+  {
+    title: "Montage",
+    kind: "Photo gallery",
+    cover: "bg-success",
+    icon: "bi-images",
+    // domain: "montage-frontend.vercel.app",
+    desc: "A photo album app with Google sign-in — organise photos into shareable albums, with tag filtering, favorites, and per-image comments.",
+    tags: ["React", "Node.js", "Cloudinary"],
+    demo: "https://montage-frontend.vercel.app",
+    code: "https://github.com/tanaymurade74/MontageFrontend",
+  },
   {
     title: "Book Shelf",
     kind: "Web app",
@@ -172,7 +184,7 @@ function App() {
 
           <div className="row g-4">
             {projects.map((p) => (
-              <div className="col-md-6 col-lg-4" key={p.title}>
+              <div className="col-md-6 col-lg-3" key={p.title}>
                 <div className="card h-100 bg-dark border-secondary shadow-sm">
                   <div
                     className={`position-relative overflow-hidden rounded-top bg-gradient d-flex align-items-center justify-content-center ${p.cover}`}
