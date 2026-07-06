@@ -15,7 +15,7 @@ const projects = [
     icon: "bi-images",
     // domain: "montage-frontend.vercel.app",
     desc: "A photo album app with Google sign-in — organise photos into shareable albums, with tag filtering, favorites, and per-image comments.",
-    tags: ["React", "Node.js", "Cloudinary"],
+    tags: ["React", "Node.js", "Cloudinary", "JWT"],
     demo: "https://montage-frontend.vercel.app",
     code: "https://github.com/tanaymurade74/MontageFrontend",
   },
@@ -48,7 +48,7 @@ const projects = [
     icon: "bi-chat-dots-fill",
     // domain: "chat-app.vercel.app",
     desc: "A real-time messaging app built on Socket.io — typing indicators, read receipts, emoji, plus message editing, deletion, and reply threads.",
-    tags: ["React", "Socket.io", "Node.js"],
+    tags: ["React", "Socket.io", "Node.js", "JWT"],
     demo: "https://chat-app-frontend-three-umber.vercel.app",
     code: "https://github.com/tanaymurade74/NexusChatFrontend",
   },
@@ -64,6 +64,7 @@ const stack = {
     ["Express", "light"],
     ["MongoDB", "success"],
     ["Mongoose", "danger"],
+    ["JWT", "warning"]
   ],
   Tools: [
     ["Git", "danger"],
