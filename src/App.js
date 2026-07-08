@@ -37,8 +37,8 @@ const projects = [
     icon: "bi-funnel-fill",
     // domain: "anvaya-crm.vercel.app",
     desc: "An intuitive CRM for lead management — with pipeline visualisation, scheduled follow-ups, and analytics to keep every deal moving.",
-    tags: ["React", "Node.js", "MongoDB"],
-    demo: "https://crm-frontend-9o5d.vercel.app",
+    tags: ["React", "Node.js", "MongoDB", "JWT"],
+    demo: "https://rapport-frontend-two.vercel.app",
     code: "https://github.com/tanaymurade74/Rapport-Frontend",
   },
   {
